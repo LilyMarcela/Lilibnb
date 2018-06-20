@@ -12,7 +12,7 @@
         <div class="form-group">
         <%= f.label :price, "Price per night:", class: "col-md-4 control-label" %>
         <div class="col-md-4">
-          <%= f.text_field :photo, class: "form-control", placeholder: "Price per night" %>
+          <%= f.text_field :price, class: "form-control", placeholder: "Price per night" %>
         </div>
         <div class="form-group">
         <%= f.label :description, "Description:", class: "col-md-4 control-label" %>
@@ -22,12 +22,12 @@
         <div class="form-group">
         <%= f.label :type, "Type of bnb:", class: "col-md-4 control-label" %>
         <div class="col-md-4">
-        <%= f.select :type, options_for_select(Type.all.map{|t| [t.name, t.id]}), { :include_blank => "Please select category"}, {:class => "form-control"} %>
+        <%= f.select :type_id, options_for_select(Type.all.map{|t| [t.name, t.id]}), { :include_blank => "Please select category"}, {:class => "form-control"} %>
         </div>
         <div class="form-group">
         <%= f.label :location, "Location:", class: "col-md-4 control-label" %>
         <div class="col-md-4">
-        <%= f.select :location, options_for_select(Location.all.map{|t| [t.name, t.id]}), { :include_blank => "Please select category"}, {:class => "form-control"} %>
+        <%= f.select :location_id, options_for_select(Location.all.map{|t| [t.country, t.id]}), { :include_blank => "Please select your country"}, {:class => "form-control"} %>
         </div>
 
 

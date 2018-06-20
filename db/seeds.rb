@@ -10,5 +10,5 @@
 end
 
 [["Bogota", "Colombia"],["New York", "USA"], ["Berlin", "Germany"] ].each do |loc|
-    Type.find_or_create_by(city: loc.first, country: loc.last)
+    Location.find_or_create_by(city: loc.first, country: loc.last)
 end

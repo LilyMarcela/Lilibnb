@@ -1,0 +1,13 @@
+<h1>AirBnB</h1>
+
+<div>
+
+
+<div class="container col-4">
+<img src="<%=@place.photo%>">
+<div><%= link_to 'Edit',  "/places/#{@place.id}/edit", method: :get, class: 'btn btn-primary' %><div>
+</div>
+<div><%= link_to 'Back',  "/places/", method: :get, class: 'btn btn-primary' %><div>
+</div>
+</div>
+<div><%= link_to 'Delete',  "/places/#{@place.id}", method: :delete, class: 'btn btn-primary' %><div>

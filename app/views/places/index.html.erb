@@ -2,6 +2,7 @@
 
   <% @places.each do |place| %>
     <li>
+      <a href="/places/<%= place.id%>">
       <div class="col-sm-3">
         <div class="row">
           <div><img src="<%= place.photo %>"></div>
@@ -9,10 +10,11 @@
           <div><h6>$<%= place.price %> per night</h6></div>
           <br>
           <div class="type"><%= place.type.name %></div>
-          
+        </a>
     
            <% end %>
         </div>
      </div>
     </li>
 </div>
+<div><%= link_to 'New',  "/places/new", method: :get, class: 'btn btn-primary' %><div>
