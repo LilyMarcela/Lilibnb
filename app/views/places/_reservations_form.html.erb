@@ -1,0 +1,30 @@
+<div class="container">
+
+<%= form_for @place_user, url: place_place_users_path(@place,@place_user ) ,method: :post, :html => {:class => "form-horizontal center"} do |f| %>
+      
+        <div class="form-group">
+        <%= f.label :date_start, "Date-start:", class: "col-md-4 control-label" %>
+       
+        <div class="col-md-4">
+          <%= select_month(Time.now)   %>
+        </div>
+        <div class="col-md-4">
+          <%= select_day(Time.now)   %>
+        </div>
+    </div>
+    <div class="form-group">
+    <%= f.label :date_end, "Date-end:", class: "col-md-4 control-label" %>
+    
+    <div class="col-md-4">
+      <%= select_month(Time.now)   %>
+    </div>
+    <div class="col-md-4">
+      <%= select_day(Time.now)   %>
+    </div>
+        
+             
+
+      <%= f.submit "Book the place", class: "btn btn-default btn-primary" %>  
+ <% end %>
+
+</div>

@@ -28,6 +28,8 @@ class PlacesController < ApplicationController
 
     def show
         @place = Place.find(params[:id])
+        @place_user = PlaceUser.new
+        #@booking = Booking.new
     end
 
     def destroy
