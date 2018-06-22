@@ -6,21 +6,15 @@
         <%= f.label :date_start, "Date-start:", class: "col-md-4 control-label" %>
        
         <div class="col-md-4">
-          <%= select_month(Time.now)   %>
+          <%= select_date Date.today, :prefix => :place_user  %>
         </div>
-        <div class="col-md-4">
-          <%= select_day(Time.now)   %>
-        </div>
+        
     </div>
     <div class="form-group">
     <%= f.label :date_end, "Date-end:", class: "col-md-4 control-label" %>
     
-    <div class="col-md-4">
-      <%= select_month(Time.now)   %>
-    </div>
-    <div class="col-md-4">
-      <%= select_day(Time.now)   %>
-    </div>
+    
+    <%= select_date Date.today, :prefix => :place_user %>
         
              
 
